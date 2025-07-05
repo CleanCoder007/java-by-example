@@ -1,0 +1,1 @@
+A repository targeted to have example codes to understand the java concepts
