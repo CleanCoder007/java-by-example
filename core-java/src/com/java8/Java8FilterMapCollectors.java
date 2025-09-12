@@ -1,5 +1,8 @@
 package com.java8;
 
+import com.java8.factory.Student;
+import com.java8.factory.StudentRecordFactory;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -9,7 +12,8 @@ public class Java8FilterMapCollectors {
         List<Student> students = StudentRecordFactory.generateStudents();
         //1. Find the list of students whose rank is greater than 160 living in Pune
 
-        List<Student> filteredStudents = students.stream().filter(student -> student.getRank() > 160 && student.getCity().equalsIgnoreCase("PUNE")).toList();
+        List<Student> filteredStudents = students.stream()
+                                        .filter(student -> student.getRank() > 160 && student.getCity().equalsIgnoreCase("PUNE")).toList();
         System.out.println(filteredStudents);
 
         //2.Filter the students living in Chennai and [[[[[[[[[/sort them using their name
@@ -99,5 +103,8 @@ public class Java8FilterMapCollectors {
                 .findFirst();
         System.out.println(secondRankedStudent);
 
+        //Sort the students based on their FirstName
+        System.out.println("\nSort the students based on their FirstName");
+//        students.stream().sorted( )
     }
 }

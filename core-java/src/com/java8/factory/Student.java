@@ -1,4 +1,4 @@
-package com.java8;
+package com.java8.factory;
 
 import java.util.List;
 import java.util.Objects;
